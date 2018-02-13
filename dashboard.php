@@ -1,7 +1,7 @@
 <?php session_start();
 
 include 'vendor/autoload.php';
-
+include 'user.php';
 $fb = new Facebook\Facebook([
     'app_id' => '1985095261743329', // Replace {app-id} with your app id
     'app_secret' => '2b9be034265ef3264b96e5d713a0b3eb',
@@ -23,6 +23,9 @@ $user = $response->getGraphUser();
 $_SESSION['FBID'] = $user['id'];
 $_SESSION['FULLNAME'] = $user['name'];
 $_SESSION['EMAIL'] = $user['email'];
+$url ="http://localhost:3000/subscription.php/?id=" . $_SESSION['FBID'];
+
+checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 ?>
 
