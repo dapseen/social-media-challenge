@@ -1,6 +1,12 @@
 <?php session_start();
-$count = $_SESSION['views'] = 1;
-echo $count + 1;
+if (!isset($_SESSION['views'])) {
+    $_SESSION['views'] = 0;
+}
+
+$_SESSION['views'] = $_SESSION['views']+1;
+echo $_SESSION['views'];
+
+ echo $_GET['id']
 
 ?>
 
@@ -18,52 +24,63 @@ echo $count + 1;
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">SCM</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">About Challenge</a></li>
-            <li><a href="badges.html">Gospel Pillars</a></li>
-            <li><a href="collapsible.html">Dr. Isaiah Wealth</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="sass.html">About Challenge</a></li>
-            <li><a href="badges.html">Gospel Pillars</a></li>
-            <li><a href="collapsible.html">Dr. Isaiah Wealth</a></li>
-        </ul>
-
     </div>
 </nav>
 <div class="container">
 
-<div id="sub1">
-    <input type="button" value="SUB1">
-</div>
+    <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1"
+    id="sub1">
+        Subscribe to Isaiah wealth
+    </a>
+
 <br>
-<div id="sub2">
-    <input type="button" value="SUB2">
-</div>
+    <a href="https://www.youtube.com/channel/UCyNwPPMr09qhVAqwHrTWvJQ?sub_confirmation=1"
+       id="sub2">
+        Click here to subscribe to Spirit and Bride TV
+    </a>
+
+
 <br>
-<div id="sub3">
-    <input type="button" value="SUB3">
-</div>
+    <a href="https://www.youtube.com/channel/UCAAbIfFN-vy1PIo2Mdl5evg?sub_confirmation=1"
+       id="sub3">
+        Click here to subscribe to Gospel pillars Church Channel
+    </a>
+
+
     <p id="result"></p>
+
+    <form action="done.php" method="post">
+        <input type="hidden" id="jsresult" name="jscount" value="">
+        <input type="hidden" id="idcount" name="idcount" value="<?php echo $_GET['id']; ?>">
+        <input type="hidden" id="phpresult" name="phpcount" value="<?php echo $_SESSION['views']; ?>">
+        <input type="submit" value="Done">
+    </form>
 </div>
 
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 <script>
+
     $(".button-collapse").sideNav();
 
     //click function
     (function (){
         var count = 0;
         $('#sub1,#sub2,#sub3').click(function(){
-            count++ ;
-            document.getElementById('result').innerHTML = count;
-        })
+            count++;
+            console.log(count);
+            window.localStorage.clickCount = count;
+            document.getElementById('jsresult').value = window.localStorage.clickCount;
+        });
+        $('a').click(function() {
+            window.open($(this).attr('href'),'title', 'width=800, height=700');
+            return false;
+        });
     })();
 
 </script>
 <?php
-if( isset($_SESSION['views']) && $_SESSION['views'] > 3){
+if( isset($_SESSION['views']) && $_SESSION['views'] > 2){
 unset($_SESSION['views']);
 }
 ?>

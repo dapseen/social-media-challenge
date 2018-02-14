@@ -20,7 +20,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> HEllo </title>
+    <title> Social Media </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -38,16 +38,17 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">SCM</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
+        <?php if(isset($_SESSION['FBID'])){ ?>
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">About Challenge</a></li>
-            <li><a href="badges.html">Gospel Pillars</a></li>
-            <li><a href="collapsible.html">Dr. Isaiah Wealth</a></li>
+            <li><a href="./dashboard.php">My Ranking</a></li>
+            <li><a href="./how-it-works">How it works</a></li>
         </ul>
+
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="sass.html">About Challenge</a></li>
-            <li><a href="badges.html">Gospel Pillars</a></li>
-            <li><a href="collapsible.html">Dr. Isaiah Wealth</a></li>
+            <li><a href="./dashboard.php">My Ranking</a></li>
+            <li><a href="./how-it-works">How it works</a></li>
         </ul>
+        <?php }; ?>
 
     </div>
 </nav>
@@ -63,12 +64,10 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
         <h3 style="text-align: center">
             login to participate in the challenge
         </h3>
-        <div class="fb-login-button" data-max-rows="1" data-size="large"
-             data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true">
-        </div>
-        <?php
-        echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
-        ?>
+            <?php
+            echo '<a href="' . htmlspecialchars($loginUrl) . '"><img src="./assets/img/fb_image.jpg" alt="">';
+            ?>
+            </a>
         <?php endif; ?>
     </div>
 </div>
