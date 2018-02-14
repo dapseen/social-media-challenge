@@ -34,7 +34,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> HEllo </title>
+    <title> My Ranking </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -58,6 +58,8 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
     </div>
 </nav>
+<div class="container">
+
 
 <p>
     <?php $user_info = user_load($_SESSION['FBID']);
@@ -72,16 +74,43 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <h1>
     <?php $number = user_subscribed($user_info[0]);
-    echo $number;
+    if(isset($number)){
+        echo $number;
+    }else{
+        echo 'start inviting people to increase your scores with your unique referral link below';
+    }
+
     ?>
 </h1>
 
 <p>
-    http://localhost:3000/subscription.php?id=<?php echo $user_info[0]; ?>
+    <!-- The text field -->
+    <input type="text" value="http://localhost:3000/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+    
+    <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
+
 </p>
+    <h6>
+        The Number above represent total number of people that have successfully subscribed via your unique link
+    </h6>
+    </h2>
+</div>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 <script>
+    function myFunction() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput");
+
+        /* Select the text field */
+        copyText.select();
+
+        /* Copy the text inside the text field */
+        document.execCommand("Copy");
+
+        /* Alert the copied text */
+        alert("Copied the text: " + copyText.value);
+    }
     $(".button-collapse").sideNav();
 </script>
 </body>
