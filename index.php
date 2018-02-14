@@ -42,11 +42,13 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
             <li><a href="./how-it-works.html">How it works</a></li>
+            <li><a href="./logout.php">Log out</a></li>
         </ul>
 
         <ul class="side-nav" id="mobile-demo">
             <li><a href="./dashboard.php">My Ranking</a></li>
             <li><a href="./how-it-works.html">How it works</a></li>
+            <li><a href="./logout.php">Logout</a></li>
         </ul>
         <?php }; ?>
 
