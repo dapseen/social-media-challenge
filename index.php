@@ -41,12 +41,12 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
         <?php if(isset($_SESSION['FBID'])){ ?>
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
-            <li><a href="./how-it-works">How it works</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
         </ul>
 
         <ul class="side-nav" id="mobile-demo">
             <li><a href="./dashboard.php">My Ranking</a></li>
-            <li><a href="./how-it-works">How it works</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
         </ul>
         <?php }; ?>
 

@@ -46,13 +46,13 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
-            <li><a href="./how-it-works">How it works</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
             <li><a href="./logout.php">Logout</a></li>
         </ul>
 
         <ul class="side-nav" id="mobile-demo">
             <li><a href="./dashboard.php">My Ranking</a></li>
-            <li><a href="./how-it-works">How it works</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
             <li><a href="./logout.php">LogOut</a></li>
         </ul>
 
@@ -86,7 +86,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <p>
     <!-- The text field -->
     <input type="text" value="http://localhost:3000/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
-    
+
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
 </p>
