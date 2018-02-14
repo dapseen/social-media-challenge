@@ -38,6 +38,7 @@ if ( isset( $session ) ) {
 	    $_SESSION['FBID'] = $fbid;           
         $_SESSION['FULLNAME'] = $fbfullname;
 	    $_SESSION['EMAIL'] =  $femail;
+
     /* ---- header location after session ----*/
   header("Location: index.php");
 } else {
