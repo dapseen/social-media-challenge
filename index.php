@@ -53,7 +53,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 </nav>
 <div class="container">
     <div class="row">
-        <?php if($_SESSION['FBID']):{ ?>
+        <?php if(isset($_SESSION['FBID'])):{ ?>
 
         <p>
             Welcome: <?php echo $_SESSION['FULLNAME']; ?>
