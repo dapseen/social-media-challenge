@@ -2,9 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> How it works </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1985095261743329&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">SCM</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="./dashboard.php">My Ranking</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
+            <li><a href="./logout.php">Logout</a></li>
 
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="./dashboard.php">My Ranking</a></li>
+            <li><a href="./how-it-works.html">How it works</a>
+            <li><a href="./logout.php">Logout</a></li>
+
+        </ul>
+
+    </div>
+</nav>
+<div class="container">
+    <h2>
+        How it works
+    </h2>
+    <p>
+        This app is set to reward Social media Ambassadors that are actively sharing the youtube link <br>
+        <ol>
+    <li>
+        Login with facebook to have access to your unique link
+    </li>
+    <li>
+        Copy your unique link on your <b>My ranking</b> page and send it to people.
+    </li>
+    <li>
+        Your unique link has all the channels embedded and its very easy for people to click and subscribe
+    </li>
+    <li>
+        Your number on <b>My ranking</b> page represent people that have successfully subscribed to the channel
+    </li>
+</ol>
+    </p>
+    <p>
+        This is the first version of Social MEdia challange, and there are loads of features
+        we planning to implement, so bare with us, if you cant find it very easy to use
+    </p>
+</div>
+
+
+<script>
+    $(".button-collapse").sideNav();
+</script>
 </body>
 </html>
