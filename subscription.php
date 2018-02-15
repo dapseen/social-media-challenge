@@ -22,7 +22,7 @@ echo $_SESSION['views'];
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">SCM</a>
+        <a href="#!" class="brand-logo">S.M.C (V 1.0.0)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
     </div>
 </nav>
@@ -32,14 +32,16 @@ echo $_SESSION['views'];
     id="sub1">
         Subscribe to Isaiah wealth
     </a>
-
+    <br>
+    <br>
 <br>
     <a href="https://www.youtube.com/channel/UCyNwPPMr09qhVAqwHrTWvJQ?sub_confirmation=1"
        id="sub2">
         Click here to subscribe to Spirit and Bride TV
     </a>
 
-
+    <br>
+    <br>
 <br>
     <a href="https://www.youtube.com/channel/UCAAbIfFN-vy1PIo2Mdl5evg?sub_confirmation=1"
        id="sub3">

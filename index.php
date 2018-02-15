@@ -20,7 +20,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Social Media </title>
+    <title> Social Media V.1.0.0 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -36,7 +36,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
     }(document, 'script', 'facebook-jssdk'));</script>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">S.M.C</a>
+        <a href="#!" class="brand-logo">S.M.C (V 1.0.0)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <?php if(isset($_SESSION['FBID'])){ ?>
         <ul class="right hide-on-med-and-down">
