@@ -58,9 +58,9 @@ if($totalCount >= 4){
     </div>
 </nav>
 <div class="container">
-    <h2>
+    <h4>
         <?php echo $congrats; ?>
-    </h2>
+    </h4>
 
     <a href="index.php">Visit here to Become an Ambassador and help spread the Gospel</a>
 </div>
