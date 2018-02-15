@@ -85,7 +85,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="http://"<?php $_SERVER['SERVER_NAME']; ?>"/subscription.php/?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="http://"<?php echo $_SERVER['SERVER_NAME']; ?>"/subscription.php/?id=<?php echo $user_info[0]; ?>" id="myInput">
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
