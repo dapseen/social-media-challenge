@@ -25,7 +25,7 @@ $user = $response->getGraphUser();
 $_SESSION['FBID'] = $user['id'];
 $_SESSION['FULLNAME'] = $user['name'];
 $_SESSION['EMAIL'] = $user['email'];
-$url ="http://localhost:3000/subscription.php/?id=" . $_SESSION['FBID'];
+$url ="http://".$_SERVER['SERVER_NAME']."/subscription.php/?id=" . $_SESSION['FBID'];
 
 checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
@@ -85,7 +85,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="http://localhost:3000/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="http://"<?php $_SERVER['SERVER_NAME']; ?>"/subscription.php/?id=<?php echo $user_info[0]; ?>" id="myInput">
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 

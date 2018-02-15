@@ -11,7 +11,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
-$redirectUrl = "http://".$_SERVER['SERVER_NAME'] . ':3000'."/fb-callback.php";
+$redirectUrl = "http://".$_SERVER['SERVER_NAME']."/fb-callback.php";
 $permissions = ['email']; // Optional permissions
 $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 ?>
@@ -36,7 +36,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
     }(document, 'script', 'facebook-jssdk'));</script>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">SCM</a>
+        <a href="#!" class="brand-logo">S.M.C</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <?php if(isset($_SESSION['FBID'])){ ?>
         <ul class="right hide-on-med-and-down">
