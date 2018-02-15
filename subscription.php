@@ -6,7 +6,6 @@ if (!isset($_SESSION['views'])) {
 $_SESSION['views'] = $_SESSION['views']+1;
 echo $_SESSION['views'];
 
- echo $_GET['id']
 
 ?>
 
@@ -51,11 +50,15 @@ echo $_SESSION['views'];
 
     <p id="result"></p>
 
+    <p>
+        Click on done button below
+    </p>
+
     <form action="done.php" method="post">
         <input type="hidden" id="jsresult" name="jscount" value="">
         <input type="hidden" id="idcount" name="idcount" value="<?php echo $_GET['id']; ?>">
         <input type="hidden" id="phpresult" name="phpcount" value="<?php echo $_SESSION['views']; ?>">
-        <input type="submit" value="Done">
+        <input type="submit" class="waves-effect waves-light btn" value="Done">
     </form>
 </div>
 
