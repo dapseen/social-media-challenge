@@ -42,7 +42,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">S.M.C (V 1.0.0)</a>
+        <a href="#!" class="brand-logo">S.M.C (V1)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
@@ -85,7 +85,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="http://"<?php echo $_SERVER['SERVER_NAME']; ?>"/subscription.php/?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="http://smc.druphub.org/subscription.php/?id=<?php echo $user_info[0]; ?>" id="myInput">
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
