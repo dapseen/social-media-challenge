@@ -1,6 +1,6 @@
 <?php
 
-include './dbconfig.php';
+include 'dbconfig.php';
 
 //query logged in user
 
@@ -51,10 +51,8 @@ if($totalCount >= 4){
         </ul>
 
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="./dashboard.php">My Ranking</a></li>
-            <li><a href="./how-it-works.html">How it works</a>
-            <li><a href="./logout.php">Logout</a></li>
-
+            <li><a href="index.php">Login</a></li>
+            <li><a href="how-it-works.html">How it works</a>
         </ul>
 
     </div>

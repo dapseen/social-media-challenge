@@ -22,6 +22,10 @@ $_SESSION['views'] = $_SESSION['views']+1;
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">S.M.C(V 1)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="./index.php">Login</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
+        </ul>
     </div>
 </nav>
 <div class="container">
