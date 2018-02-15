@@ -70,7 +70,6 @@ if (! $accessToken->isLongLived()) {
 
 $_SESSION['fb_access_token'] = (string) $accessToken;
 
-header('Location: http://smc.druphub.org/dashboard.php');
 
    /*if(isset($session)){
         $request = new \Facebook\FacebookRequest($session,'GET','/me');
