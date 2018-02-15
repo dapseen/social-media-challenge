@@ -51,6 +51,9 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
             <li><a href="./logout.php">Logout</a></li>
         </ul>
         <?php }; ?>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="./how-it-works.html">How it works</a></li>
+        </ul>
 
     </div>
 </nav>
