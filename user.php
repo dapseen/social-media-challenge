@@ -1,7 +1,7 @@
 <?php
 
 function checkUser($fuid,$fname,$femail,$url){
-    include  '/dbconfig.php';
+    include  'dbconfig.php';
     $sql= "SELECT * FROM users WHERE Fuid = $fuid";
     $result = $conn->query($sql);
 
