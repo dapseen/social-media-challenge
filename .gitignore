@@ -1,3 +1,4 @@
 .idea/
 dbconfig.php
 node_modules/
+vendor/
