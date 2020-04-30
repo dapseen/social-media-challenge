@@ -15,6 +15,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
     <title> Subscription</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
@@ -30,27 +31,26 @@ $_SESSION['views'] = $_SESSION['views']+1;
 </nav>
 <div class="container">
 
-    <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1"
+
+<div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal"> 7 PASTORS that BLESSED My Life: Part 1- A Generation That Curses Fathers</h4>
+      </div>
+      <div class="card-body">
+        <a href="https://www.youtube.com/watch?v=Wd_B6FFyQUs&t=2036s?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Watch Now</a>
+      </div>
+    </div>
+
+
+
+
+    <a href=""
     id="sub1">
-        Subscribe to Isaiah wealth
+   
     </a>
     <br>
     <br>
 <br>
-    <a href="https://www.youtube.com/channel/UCyNwPPMr09qhVAqwHrTWvJQ?sub_confirmation=1"
-       id="sub2">
-        Click here to subscribe to Spirit and Bride TV
-    </a>
-
-    <br>
-    <br>
-<br>
-    <a href="https://www.youtube.com/channel/UCAAbIfFN-vy1PIo2Mdl5evg?sub_confirmation=1"
-       id="sub3">
-        Click here to subscribe to Gospel pillars Church Channel
-    </a>
-
-
     <p id="result"></p>
 
     <p>
@@ -74,7 +74,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
     //click function
     (function (){
         var count = 0;
-        $('#sub1,#sub2,#sub3').click(function(){
+        $('#sub1').click(function(){
             count++;
             console.log(count);
             window.localStorage.clickCount = count;
@@ -88,8 +88,8 @@ $_SESSION['views'] = $_SESSION['views']+1;
 
 </script>
 <?php
-if( isset($_SESSION['views']) && $_SESSION['views'] > 2){
-unset($_SESSION['views']);
+if( isset($_SESSION['views']) && $_SESSION['views'] >= 2 ){
+$_SESSION['views'] = 0;
 }
 ?>
 </body>

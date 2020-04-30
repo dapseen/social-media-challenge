@@ -8,16 +8,16 @@ $jsCount = $_POST['jscount'];
 $idcount = $_POST['idcount'];
 $phpCount = $_POST['phpcount'];
 
-$totalCount = $jsCount + $phpCount;
 
-if($totalCount >= 4){
+
+if($jsCount >= 1){
     $countNUmber = 1;
     //perform insert
     $sql = "INSERT INTO count (UID,subscribers,time_created) VALUES ('$idcount','$countNUmber',current_time )";
     $conn->query($sql);
-    $congrats = "Thanks for subscribing to our Channels. Please invite your friends";
-}else{
-    echo 'It seems you have not Subscribed to the 3 channels, Please try again';
+    $congrats = "Thanks for watching Part 1 of this series. Please invite your friends";
+}elseif($jsCount != 1 ){
+    $congrats = "It seems you have not watched this video, Please try again";
 }
 
 ?>

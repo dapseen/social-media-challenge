@@ -1,0 +1,49 @@
+version: '3'
+services:
+  web:
+    build:
+      context:
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    container_name: web
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www
+    volumes: 
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks: 
+      - app-network
+  #nginx
+  server:
+    image: nginx:alpine
+    container_name: server
+    restart: unless-stopped
+    ports: 
+      - "80:80"
+      - "443:443"
+    volumes: 
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks: 
+      - app-network
+  database:
+    image: mysql:8
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE:smc"
+      - "MYSQL_USER:smc"
+      - "MYSQL_PASSWORD=secret"
+      - "MYSQL_ROOT_PASSWORD=secret"
+    ports:
+      - 33061:3306
+    networks: 
+      - app-network
+#docker network
+networks: 
+  app-network:
+    driver: bridge
+volumes:
+  dbdata:
+    driver: local 

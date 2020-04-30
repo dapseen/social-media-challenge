@@ -11,7 +11,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
-$redirectUrl = "http://smc.druphub.org/fb-callback.php";
+$redirectUrl = "http://localhost:3000/fb-callback.php";
 $permissions = ['email']; // Optional permissions
 $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 ?>
