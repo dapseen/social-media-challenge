@@ -11,7 +11,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
-$redirectUrl = "https://myspiritualfathers.com.ng/fb-callback.php";
+$redirectUrl = "https://specialfatherhoodseries.com.ng/fb-callback.php";
 $permissions = ['email']; // Optional permissions
 $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 ?>
