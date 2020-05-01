@@ -12,7 +12,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title> Subscription</title>
+    <title> Spiritual Fatherhood Series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Share your videos with friends, family, and the world">
     <link rel="search" type="application/opensearchdescription+xml" href="https://www.youtube.com/opensearch?locale=en_US" title="YouTube">

@@ -20,7 +20,7 @@ $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Social Media V.1.0.0 </title>
+    <title> Spiritual Fatherhood Series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
