@@ -6,12 +6,12 @@ include 'vendor/autoload.php';
 $fb = new Facebook\Facebook([
     'app_id' => '1985095261743329', // Replace {app-id} with your app id
     'app_secret' => '2b9be034265ef3264b96e5d713a0b3eb',
-    'default_graph_version' => 'v2.2',
+    'default_graph_version' => 'v5.0',
 ]);
 
 $helper = $fb->getRedirectLoginHelper();
 
-$redirectUrl = "http://localhost:3000/fb-callback.php";
+$redirectUrl = "https://myspiritualfathers.com.ng/fb-callback.php";
 $permissions = ['email']; // Optional permissions
 $loginUrl = $helper->getLoginUrl($redirectUrl, $permissions);
 ?>

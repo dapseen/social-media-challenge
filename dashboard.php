@@ -4,10 +4,14 @@ include 'vendor/autoload.php';
 
 include 'user.php';
 include 'user_query.php';
+
+
+
+
 $fb = new Facebook\Facebook([
     'app_id' => '1985095261743329', // Replace {app-id} with your app id
     'app_secret' => '2b9be034265ef3264b96e5d713a0b3eb',
-    'default_graph_version' => 'v2.2',
+    'default_graph_version' => 'v5.0',
 ]);
 try {
     // Returns a `Facebook\FacebookResponse` object
@@ -85,13 +89,13 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="http://localhost:3000/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="<?php getenv('URL') ?>/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
 </p>
     <h6>
-        The Number above represent total number of people that have successfully subscribed via your unique link
+        The Number above represent total number of people that have successfully watched Dr's Series via your unique link
     </h6>
     </h2>
 </div>
