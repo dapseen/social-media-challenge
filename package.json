@@ -1,0 +1,24 @@
+{
+  "name": "social-media-challenge",
+  "version": "1.0.0",
+  "description": "A gaming app to improve social evangelism in church",
+  "main": "index.js",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dapseen/social-media-challenge.git"
+  },
+  "author": "dapseen@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dapseen/social-media-challenge/issues"
+  },
+  "homepage": "https://github.com/dapseen/social-media-challenge#readme"
+}
