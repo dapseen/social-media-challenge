@@ -37,6 +37,13 @@ $_SESSION['views'] = $_SESSION['views']+1;
         <h4 class="my-0 font-weight-normal"> 7 PASTORS that BLESSED My Life: Part 1- A Generation That Curses Fathers</h4>
       </div>
       <div class="card-body">
+      <p>
+        <video width="320" height="240" autoplay>
+            <source src="https://res.cloudinary.com/dtjf3tix6/video/upload/c_fill,w_320/v1588333536/scm/WhatsApp_Video_2020-05-01_at_12.04.14_PM.mp4" type="video/mp4">
+            <source src="https://res.cloudinary.com/dtjf3tix6/video/upload/v1588333536/scm/WhatsApp_Video_2020-05-01_at_12.04.14_PM.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+      </p>
         <a href="https://www.youtube.com/watch?v=Wd_B6FFyQUs&t=2036s?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Watch Now</a>
       </div>
     </div>
