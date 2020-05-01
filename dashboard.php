@@ -90,6 +90,8 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <p>
     <!-- The text field -->
     <input type="text" value="https://myspiritualfathers.com.ng/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+   
+    <a  href="https://api.whatsapp.com/send?phone=&text=Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
