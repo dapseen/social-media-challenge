@@ -89,7 +89,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="<?php getenv('URL') ?>/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="https://myspiritualfathers.com.ng/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
