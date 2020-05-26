@@ -75,7 +75,6 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <p>
     <?php $user_info = user_load($_SESSION['FBID']);
     
-    print_r($user_info);
     ?>
 </p>
 <h6>
