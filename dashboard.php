@@ -95,15 +95,15 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="<?php echo $URL."/subscription.php?id?=".$user_info[0]; ?>" id="myInput">
+    <input type="text" value="<?php echo $URL."/subscription.php?id=".$user_info[0]; ?>" id="myInput">
    
-    <a  href="https://api.whatsapp.com/send?phone=&text=<?php echo $URL."/subscription.php?id?=".$user_info[0]; ?>%20Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
+    <a  href="https://api.whatsapp.com/send?phone=&text=<?php echo $URL."/subscription.php?id=".$user_info[0]; ?>%20Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
 </p>
     <h6>
-        The Number above represent total number of people that have successfully watched Dr's Series via your unique link
+        The Number above represents total number of people that have successfully <b>subscribed to Dr Isaiah Wealth's Youtube Channel</b> via your unique link
     </h6>
     </h2>
 </div>

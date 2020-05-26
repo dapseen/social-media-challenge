@@ -4,9 +4,7 @@ if (!isset($_SESSION['views'])) {
 }
 
 $_SESSION['views'] = $_SESSION['views']+1;
-echo $_SESSION['views'];
 
- echo $_GET['id']
 
 ?>
 
@@ -31,39 +29,56 @@ echo $_SESSION['views'];
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">SCM</a>
+        <a href="#!" class="brand-logo">S.M.C(V 1)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="./index.php">Login</a></li>
+            <li><a href="./how-it-works.html">How it works</a></li>
+        </ul>
     </div>
 </nav>
 <div class="container">
 
-    <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1"
-    id="sub1">
-        Subscribe to Isaiah wealth
-    </a>
 
-<br>
-    <a href="https://www.youtube.com/channel/UCyNwPPMr09qhVAqwHrTWvJQ?sub_confirmation=1"
-       id="sub2">
-        Click here to subscribe to Spirit and Bride TV
-    </a>
+<div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">  Isaiah Wealth Ministries - Dr. Isaiah Wealth. </h4>
+      </div>
+      <div class="card-body">
+      
+        <video width="320" height="240" autoplay>
+            <source src="https://res.cloudinary.com/dtjf3tix6/video/upload/c_fill,w_320/v1588333536/scm/WhatsApp_Video_2020-05-01_at_12.04.14_PM.mp4" type="video/mp4">
+            <source src="https://res.cloudinary.com/dtjf3tix6/video/upload/v1588333536/scm/WhatsApp_Video_2020-05-01_at_12.04.14_PM.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
 
+        <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Subscribe</a>
+      </div>
+</div><div class="card mb-4 shadow-sm">
+    <div class="card-header">
+        <p> 
+            <h5></h5>
+            <ul>
+                <li class="my-0 font-weight-normal">SUBSCRIBE to the channel if you have not.</li>
+                <li class="my-0 font-weight-normal">Click on the Bell notification</li>
+            </ul>
+        </p>
+        <h5 class="my-0 font-weight-normal">Click on DONE button below, when you are done subscribing to our YouTube channel</h5>
+    </div>
+        <div class="card-body">
+        <a href="" id="sub1"></a>
+            <p id="result"></p>
 
-<br>
-    <a href="https://www.youtube.com/channel/UCAAbIfFN-vy1PIo2Mdl5evg?sub_confirmation=1"
-       id="sub3">
-        Click here to subscribe to Gospel pillars Church Channel
-    </a>
-
-
-    <p id="result"></p>
-
-    <form action="done.php" method="post">
-        <input type="hidden" id="jsresult" name="jscount" value="">
-        <input type="hidden" id="idcount" name="idcount" value="<?php echo $_GET['id']; ?>">
-        <input type="hidden" id="phpresult" name="phpcount" value="<?php echo $_SESSION['views']; ?>">
-        <input type="submit" value="Done">
-    </form>
+            <form action="done.php" method="post">
+                <input type="hidden" id="jsresult" name="jscount" value="">
+                <input type="hidden" id="idcount" name="idcount" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" id="phpresult" name="phpcount" value="<?php echo $_SESSION['views']; ?>">
+                <input type="submit" class="btn btn-lg btn-block btn-success" value="Done">
+            </form>
+        </div>
+    </div>
+</div>
+    
 </div>
 
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -75,7 +90,7 @@ echo $_SESSION['views'];
     //click function
     (function (){
         var count = 0;
-        $('#sub1,#sub2,#sub3').click(function(){
+        $('#sub1').click(function(){
             count++;
             console.log(count);
             window.localStorage.clickCount = count;
@@ -89,9 +104,10 @@ echo $_SESSION['views'];
 
 </script>
 <?php
-if( isset($_SESSION['views']) && $_SESSION['views'] > 2){
-unset($_SESSION['views']);
+if( isset($_SESSION['views']) && $_SESSION['views'] >= 2 ){
+$_SESSION['views'] = 0;
 }
 ?>
 </body>
 </html>
+
