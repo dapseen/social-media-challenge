@@ -12,7 +12,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title> Spiritual Fatherhood Series</title>
+    <title> Social Media Challenge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Share your videos with friends, family, and the world">
     <link rel="search" type="application/opensearchdescription+xml" href="https://www.youtube.com/opensearch?locale=en_US" title="YouTube">
@@ -42,7 +42,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
 
 <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal"> Spiritual FatherHood Series - Dr. Isaiah Wealth. </h4>
+        <h4 class="my-0 font-weight-normal">  Isaiah Wealth Ministries - Dr. Isaiah Wealth. </h4>
       </div>
       <div class="card-body">
       
@@ -52,11 +52,18 @@ $_SESSION['views'] = $_SESSION['views']+1;
             Your browser does not support the video tag.
         </video>
 
-        <a href="https://www.youtube.com/watch?v=Wd_B6FFyQUs&t=2036s?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Watch  Full Series</a>
+        <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Subscribe</a>
       </div>
 </div><div class="card mb-4 shadow-sm">
     <div class="card-header">
-        <h5 class="my-0 font-weight-normal">Click on DONE button below, when you are done watching on YouTube</h5>
+        <p> 
+            <h5></h5>
+            <ul>
+                <li class="my-0 font-weight-normal">SUBSCRIBE to the channel if you have not.</li>
+                <li class="my-0 font-weight-normal">Click on the Bell notification</li>
+            </ul>
+        </p>
+        <h5 class="my-0 font-weight-normal">Click on DONE button below, when you are done subscribing to our YouTube channel</h5>
     </div>
         <div class="card-body">
         <a href="" id="sub1"></a>
@@ -103,3 +110,4 @@ $_SESSION['views'] = 0;
 ?>
 </body>
 </html>
+

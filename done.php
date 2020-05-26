@@ -15,9 +15,9 @@ if($jsCount >= 1){
     //perform insert
     $sql = "INSERT INTO count (UID,subscribers,time_created) VALUES ('$idcount','$countNUmber',current_time )";
     $conn->query($sql);
-    $congrats = "Thanks for watching Part 1 of this series. Please invite your friends";
+    $congrats = "Thanks for subscribing to our Youtube Channel Please invite your friends";
 }elseif($jsCount != 1 ){
-    $congrats = "It seems you have not watched this video, Please try again";
+    $congrats = "It seems you have not subscribed to this channel, Please try again";
 }
 
 ?>
@@ -25,7 +25,7 @@ if($jsCount >= 1){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> THanks For Subscribing </title>
+    <title> Thanks For Subscribing </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -62,7 +62,7 @@ if($jsCount >= 1){
         <?php echo $congrats; ?>
     </h4>
 
-    <a href="index.php">Visit here to Become an Ambassador and help spread the Gospel</a>
+    <a href="index.php">Visit here to Become an Ambassador and help us to reach the nations </a>
 </div>
 
 
