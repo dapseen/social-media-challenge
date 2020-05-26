@@ -1,4 +1,9 @@
 <?php session_start();
+
+if ($_SESSION['FBID'] || $_SESSION['FULLNAME'] || $_SESSION['EMAIL'] ){
+    header("Location: dashboard.php");         
+}
+
 if (!isset($_SESSION['views'])) {
     $_SESSION['views'] = 0;
 }
@@ -29,7 +34,7 @@ $_SESSION['views'] = $_SESSION['views']+1;
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">S.M.A.C(V 1)</a>
+        <a href="#!" class="brand-logo">S.M.A.C(V.1)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="./index.php">Login</a></li>
@@ -51,8 +56,8 @@ $_SESSION['views'] = $_SESSION['views']+1;
             <source src="https://res.cloudinary.com/dtjf3tix6/video/upload/v1588333536/scm/WhatsApp_Video_2020-05-01_at_12.04.14_PM.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
-
         <a href="https://www.youtube.com/channel/UCcbjsobn9lYHUM5S7qQgU5A?sub_confirmation=1" id="sub1" class="btn btn-lg btn-block btn-primary">Subscribe</a>
+
       </div>
 </div><div class="card mb-4 shadow-sm">
     <div class="card-header">
