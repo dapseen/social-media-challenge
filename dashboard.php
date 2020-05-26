@@ -105,7 +105,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 </p>
     <h6>
-        The Number above represents total number of people that have successfully <b>subscribed to Dr Isaiah Wealth's Youtube Channel</b> via your unique link
+        The number above represents total number of people that have successfully <b>subscribed to Dr Isaiah Wealth's Youtube Channel</b> via your unique link
     </h6>
     </h2>
 </div>
