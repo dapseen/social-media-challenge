@@ -5,14 +5,20 @@ include 'vendor/autoload.php';
 include 'user.php';
 include 'user_query.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
+// URL
 
+$URL = getenv("URL");
 
 $fb = new Facebook\Facebook([
-    'app_id' => '1985095261743329', // Replace {app-id} with your app id
-    'app_secret' => '2b9be034265ef3264b96e5d713a0b3eb',
+    'app_id' => getenv('FB_ID'), // Replace {app-id} with your app id
+    'app_secret' => getenv('FB_SECRET'),
     'default_graph_version' => 'v5.0',
 ]);
+
+
 try {
     // Returns a `Facebook\FacebookResponse` object
     $response = $fb->get('/me?fields=id,name,email', $_SESSION['fb_access_token']);
@@ -89,9 +95,9 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <!-- The text field -->
-    <input type="text" value="https://specialfatherhoodseries.com.ng/subscription.php?id=<?php echo $user_info[0]; ?>" id="myInput">
+    <input type="text" value="<?php echo $URL."/subscription.php?id?=".$user_info[0]; ?>" id="myInput">
    
-    <a  href="https://api.whatsapp.com/send?phone=&text=https://specialfatherhoodseries.com.ng/subscription.php?id=<?php echo $user_info[0]; ?>%20Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
+    <a  href="https://api.whatsapp.com/send?phone=&text=<?php echo $URL."/subscription.php?id?=".$user_info[0]; ?>%20Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 
