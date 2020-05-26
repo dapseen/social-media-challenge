@@ -16,9 +16,9 @@ $_SESSION['views'] = $_SESSION['views']+1;
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Share your videos with friends, family, and the world">
     <link rel="search" type="application/opensearchdescription+xml" href="https://www.youtube.com/opensearch?locale=en_US" title="YouTube">
-    <meta property="og:title" content="Spiritual Fatherhood Series" />
-    <meta property="og:url" content="https://specialfatherhoodseries.com.ng/subscription.php" />
-    <meta property="og:description" content="Fatherhood Series">
+    <meta property="og:title" content="SMAC" />
+    <meta property="og:url" content="https://smac.com.ng/subscription.php" />
+    <meta property="og:description" content="SMAC">
     <meta property="og:image" content="https://res.cloudinary.com/dtjf3tix6/image/upload/v1588338126/scm/Screen_Shot_2020-05-01_at_2.01.34_PM.png">
     <meta property="og:video" content="https://res.cloudinary.com/dtjf3tix6/image/upload/v1588338126/scm/Screen_Shot_2020-05-01_at_2.01.34_PM.png" />
 

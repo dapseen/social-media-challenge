@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 // init configuration
 $clientID = '365794396457-h4n73stfbjc21e18n4a2dbddubguq2r2.apps.googleusercontent.com';
 $clientSecret = 'GRHDhYNNbgWo8j30cV2z7yFY';
-$redirectUri = 'https://specialfatherhoodseries.com.ng/index.php';
+$redirectUri = 'https://smac.com.ng/index.php';
   
 // create Client Request to access Google API
 $client = new Google_Client();
