@@ -32,6 +32,7 @@ try {
 
 $user = $response->getGraphUser();
 
+
 $_SESSION['FBID'] = $user['id'];
 $_SESSION['FULLNAME'] = $user['name'];
 $_SESSION['EMAIL'] = $user['email'];
@@ -73,6 +74,8 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <p>
     <?php $user_info = user_load($_SESSION['FBID']);
+    
+    print_r($user_info);
     ?>
 </p>
 <h6>
@@ -84,7 +87,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 
 <h1>
     <?php $number = user_subscribed($user_info[0]);
-    if(isset($number)){
+    if($number >= 1){
         echo $number;
     }else{
         echo 'start inviting people to increase your scores with your unique referral link below';
