@@ -53,7 +53,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">S.M.C (V1)</a>
+        <a href="#!" class="brand-logo">S.M.A.C (V1)</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
@@ -99,7 +99,7 @@ checkUser($_SESSION['FBID'],$_SESSION['FULLNAME'],$_SESSION['EMAIL'],$url);
     <!-- The text field -->
     <input type="text" value="<?php echo $URL."/subscription.php?id=".$user_info[0]; ?>" id="myInput">
    
-    <a  href="https://api.whatsapp.com/send?phone=&text=<?php echo $URL."/subscription.php?id=".$user_info[0]; ?>%20Visit%20url%20to%20take%20part%20in%20the%20challenge&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
+    <a  href="https://api.whatsapp.com/send?phone=&text=<?php echo $URL."/subscription.php?id=".$user_info[0]; ?>%20Visit%20url%20to%20subscribe%20to%20Youtube%20channel%20&source=&data=&app_absent=" class="waves-effect waves-light btn" >Share Via WhatsApp</a>
 
     <button class="waves-effect waves-light btn" onclick="myFunction()">Click to Copy Link</button>
 

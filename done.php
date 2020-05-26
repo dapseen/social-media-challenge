@@ -41,7 +41,7 @@ if($jsCount >= 1){
     }(document, 'script', 'facebook-jssdk'));</script>
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">SCM</a>
+        <a href="#!" class="brand-logo">SMAC</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-4x fa-bars"></i> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="./dashboard.php">My Ranking</a></li>
